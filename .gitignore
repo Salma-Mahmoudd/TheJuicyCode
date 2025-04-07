@@ -1,0 +1,29 @@
+# Node modules
+/node_modules/
+
+# Build output
+/dist/
+/build/
+
+# Logs
+*.log
+*.log.*
+
+# Dependency directories
+/.pnp
+.pnp.js
+
+# dotenv environment variables file
+.env
+.env.* 
+
+# Vite cache
+/.vite/
+
+# React Native
+# .expo/
+# .expo-shared/
+
+# Operating System files
+.DS_Store
+Thumbs.db

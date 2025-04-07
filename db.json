@@ -1,0 +1,83 @@
+{
+  "categories": [
+    { "id": "1", "name": "Seasonal" },
+    { "id": "2", "name": "Tropical" },
+    { "id": "3", "name": "Citrus" },
+    { "id": "4", "name": "Berries" },
+    { "id": "5", "name": "Exotic" }
+  ],
+  "products": [
+    {
+      "id": "1",
+      "name": "Red Delicious Apple",
+      "price": 1.99,
+      "unit": "kg",
+      "categoryId": "1",
+      "image": "/src/assets/apple.webp",
+      "description": "Crisp, juicy apples with a perfect balance of sweetness and tartness. Grown in local orchards and harvested at peak ripeness. Ideal for snacking, baking, or juicing."
+    },
+    {
+      "id": "2",
+      "name": "Cavendish Banana",
+      "price": 0.99,
+      "unit": "bunch (5-6 bananas)",
+      "categoryId": "2",
+      "image": "/src/assets/banana.webp",
+      "description": "Creamy, sweet bananas rich in potassium. Perfect for smoothies, baking, or a quick energy boost. Ethically sourced from sustainable farms."
+    },
+    {
+      "id": "3",
+      "name": "Valencia Orange",
+      "price": 2.49,
+      "unit": "kg",
+      "categoryId": "3",
+      "image": "/src/assets/orange.webp",
+      "description": "Juicy, seedless oranges bursting with vitamin C. Great for fresh juice, salads, or zesting. Picked at perfect ripeness for maximum flavor."
+    },
+    {
+      "id": "4",
+      "name": "Strawberry",
+      "price": 3.99,
+      "unit": "250g box",
+      "categoryId": "4",
+      "image": "/src/assets/strawberry.webp",
+      "description": "Plump, red strawberries with intense sweetness. Hand-picked daily for freshness. Perfect for desserts, jams, or eating fresh with cream."
+    },
+    {
+      "id": "5",
+      "name": "Kiwi",
+      "price": 4.49,
+      "unit": "piece",
+      "categoryId": "5",
+      "image": "/src/assets/kiwi.webp",
+      "description": "Fuzzy brown exterior with vibrant green flesh. Tropical sweetness with a hint of tartness. Rich in vitamin C and fiber. Ready-to-eat when slightly soft."
+    },
+    {
+      "id": "6",
+      "name": "Mango",
+      "price": 3.99,
+      "unit": "piece",
+      "categoryId": "2",
+      "image": "/src/assets/mango.webp",
+      "description": "Buttery-smooth flesh with honey-like sweetness. The 'king of fruits' is perfect for smoothies, salsas, or eating fresh. Ripens at room temperature."
+    },
+    {
+      "id": "7",
+      "name": "Lemon",
+      "price": 1.49,
+      "unit": "kg",
+      "categoryId": "3",
+      "image": "/src/assets/lemon.webp",
+      "description": "Bright, acidic lemons with fragrant zest. Essential for cooking, baking, cocktails, and home remedies. High juice content with thin rind."
+    },
+    {
+      "id": "8",
+      "name": "Blueberry",
+      "price": 5.99,
+      "unit": "200g punnet",
+      "categoryId": "4",
+      "image": "/src/assets/blueberry.webp",
+      "description": "Small berries packed with antioxidants. Sweet with a slight tartness. Excellent for pancakes, muffins, or as a healthy snack. Frozen immediately after picking."
+    }
+  ]
+}
