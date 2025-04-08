@@ -2,8 +2,8 @@ import { useState, useEffect } from "react";
 import { Routes, Route } from "react-router-dom";
 import axios from "axios";
 import Products from "./pages/Products.jsx";
-import Navbar from "./components/Navbar.jsx";
 import Cart from "./pages/Cart.jsx";
+import Login from "./pages/Login.jsx";
 
 export default function App() {
   const [loading, setLoading] = useState(false);
@@ -76,10 +76,10 @@ export default function App() {
 
   return (
     <>
-      <Navbar handleSearch={handleSearch} cart={cart} />
       <Routes>
-        <Route path="/cart" element={<Cart cart={cart} handleProdQuantity={handleProdQuantity} />} />
-        <Route path="/" element={
+        <Route path="/login" element={<Login />} />
+        <Route path="/cart" element={<Cart cart={cart} handleProdQuantity={handleProdQuantity}  />} />
+        <Route path="/products" element={
           <Products
             loading={loading}
             products={filteredProducts.slice((currentPage - 1) * productsPerPage, currentPage * productsPerPage)}
@@ -91,8 +91,10 @@ export default function App() {
             handlePage={handlePage}
             currentPage={currentPage}
             totalPages={Math.ceil(filteredProducts.length / productsPerPage)}
+            handleSearch={handleSearch}
           />
         } />
+        <Route path="*" element={<div className="text-center py-20 text-3xl text-gray-500 animate-pulse">Page not found</div>} /> 
       </Routes>
     </>
   );

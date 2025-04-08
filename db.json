@@ -1,4 +1,38 @@
 {
+  "users": [
+    {
+      "id": "1",
+      "username": "Salma Mahmoud",
+      "email": "s@gmail.com",
+      "password": "123"
+    },
+    {
+      "id": "2",
+      "username": "Omar Khaled",
+      "email": "omar@gmail.com",
+      "password": "pass456"
+    },
+    {
+      "id": "3",
+      "username": "Nour Hassan",
+      "email": "nour@example.com",
+      "password": "nourpass"
+    },
+    {
+      "id": "4",
+      "username": "Youssef Adel",
+      "email": "youssef@email.com",
+      "password": "321321"
+    }
+  ],
+  "admins": [
+    {
+      "id": "1"
+    },
+    {
+      "id": "4"
+    }
+  ],
   "categories": [
     { "id": "1", "name": "Seasonal" },
     { "id": "2", "name": "Tropical" },
