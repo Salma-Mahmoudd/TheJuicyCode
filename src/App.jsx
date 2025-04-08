@@ -4,6 +4,7 @@ import axios from "axios";
 import Products from "./pages/Products.jsx";
 import Cart from "./pages/Cart.jsx";
 import Login from "./pages/Login.jsx";
+import Dashboard from "./pages/Dashboard.jsx";
 
 export default function App() {
   const [loading, setLoading] = useState(false);
@@ -77,7 +78,8 @@ export default function App() {
   return (
     <>
       <Routes>
-        <Route path="/login" element={<Login />} />
+        <Route path="/" element={<Login />} />
+        <Route path="/dashboard" element={<Dashboard categories={categories} products={products} />} />
         <Route path="/cart" element={<Cart cart={cart} handleProdQuantity={handleProdQuantity}  />} />
         <Route path="/products" element={
           <Products
