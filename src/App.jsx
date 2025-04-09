@@ -77,12 +77,23 @@ export default function App() {
 
   const addNewCategory = async (newCategory) => {
     try {
-      const response = await axios.post("http://localhost:3002/categoris", newCategory);
+      const response = await axios.post("http://localhost:3002/categories", newCategory);
       if (response.status === 201) {
         setCategories((prevCategories) => [...prevCategories, response.data]);
       }
     } catch (error) {
       console.error("Error adding category:", error);
+    }
+  }
+
+  const addNewProduct = async (newProduct) => {
+    try {
+      const response = await axios.post("http://localhost:3002/products", newProduct);
+      if (response.status === 201) {
+        setProducts((prevProducts) => [...prevProducts, response.data]);
+      }
+    } catch (error) {
+      console.error("Error adding product:", error);
     }
   }
 
@@ -107,6 +118,7 @@ export default function App() {
             products={products}
             addNewCategory={addNewCategory}
             deleteProduct={deleteProduct}
+            addNewProduct={addNewProduct}
           />
         } />
         <Route path="/cart" element={<Cart cart={cart} handleProdQuantity={handleProdQuantity} />} />
