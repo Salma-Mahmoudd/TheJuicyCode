@@ -34,11 +34,38 @@
     }
   ],
   "categories": [
-    { "id": "1", "name": "Seasonal" },
-    { "id": "2", "name": "Tropical" },
-    { "id": "3", "name": "Citrus" },
-    { "id": "4", "name": "Berries" },
-    { "id": "5", "name": "Exotic" }
+    {
+      "id": "1",
+      "name": "Seasonal"
+    },
+    {
+      "id": "2",
+      "name": "Tropical"
+    },
+    {
+      "id": "3",
+      "name": "Citrus"
+    },
+    {
+      "id": "4",
+      "name": "Berries"
+    },
+    {
+      "id": "5",
+      "name": "Exotic"
+    },
+    {
+      "id": "e3ee",
+      "name": "Organic"
+    },
+    {
+      "id": "f2d3",
+      "name": "Dried Fruits"
+    },
+    {
+      "id": "17fa",
+      "name": "Nuts & Seeds"
+    }
   ],
   "products": [
     {
@@ -112,6 +139,51 @@
       "categoryId": "4",
       "image": "/src/assets/blueberry.webp",
       "description": "Small berries packed with antioxidants. Sweet with a slight tartness. Excellent for pancakes, muffins, or as a healthy snack. Frozen immediately after picking."
+    },
+    {
+      "id": "9",
+      "name": "Pineapple",
+      "price": 2.99,
+      "unit": "piece",
+      "categoryId": "5",
+      "image": "/src/assets/pineapple.webp",
+      "description": "Tropical fruit with a sweet, tangy flavor. Great for grilling, smoothies, or fresh fruit salads. Look for a sweet aroma and firm skin."
+    },
+    {
+      "id": "10",
+      "name": "Dried Apricots",
+      "price": 4.99,
+      "unit": "200g bag",
+      "categoryId": "f2d3",
+      "image": "/src/assets/dried-apricots.webp",
+      "description": "Sweet, chewy dried apricots rich in vitamins and fiber. Perfect for snacking or adding to trail mixes. Naturally sun-dried without preservatives."
+    },
+    {
+      "id": "11",
+      "name": "Almonds",
+      "price": 6.99,
+      "unit": "200g bag",
+      "categoryId": "17fa",
+      "image": "/src/assets/almonds.webp",
+      "description": "Crunchy, nutritious almonds packed with protein and healthy fats. Ideal for snacking, baking, or adding to salads. Raw and unsalted."
+    },
+    {
+      "id": "12",
+      "name": "Cashews",
+      "price": 7.49,
+      "unit": "200g bag",
+      "categoryId": "17fa",
+      "image": "/src/assets/cashew.webp",
+      "description": "Creamy, buttery cashews rich in nutrients. Perfect for snacking, cooking, or making cashew butter. Raw and unsalted."
+    },
+    {
+      "id": "13",
+      "name": "Walnuts",
+      "price": 8.99,
+      "unit": "200g bag",
+      "categoryId": "17fa",
+      "image": "/src/assets/walnut.webp",
+      "description": "Rich, crunchy walnuts high in omega-3 fatty acids. Great for baking, salads, or snacking. Raw and unsalted."
     }
   ]
 }
