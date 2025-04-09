@@ -4,7 +4,7 @@ export default function Navbar({ handleSearch, cart }) {
   return (
     <div className="navbar bg-base-100 shadow-sm px-10 fixed top-0 z-10">
       <div className="flex-1">
-        <Link to="/" className="btn btn-ghost text-xl">
+        <Link to="/products" className="btn btn-ghost text-xl">
           FreshBite
         </Link>
       </div>

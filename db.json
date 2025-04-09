@@ -65,6 +65,10 @@
     {
       "id": "17fa",
       "name": "Nuts & Seeds"
+    },
+    {
+      "id": "ff43",
+      "name": "New Cat"
     }
   ],
   "products": [
@@ -184,6 +188,24 @@
       "categoryId": "17fa",
       "image": "/src/assets/walnut.webp",
       "description": "Rich, crunchy walnuts high in omega-3 fatty acids. Great for baking, salads, or snacking. Raw and unsalted."
+    },
+    {
+      "id": "4a20",
+      "name": "Organic Baby Spinach",
+      "price": "4.49",
+      "unit": "200g bag",
+      "image": "/src/assets/organic-spinach.webp",
+      "description": "Tender, fresh spinach leaves rich in iron and antioxidants. Grown organically without harmful chemicals. Perfect for salads and smoothies.",
+      "categoryId": "e3ee"
+    },
+    {
+      "id": "4390",
+      "name": "Organic Avocado",
+      "price": "5.59",
+      "unit": "piece",
+      "image": "/src/assets/organic-avocado.webp",
+      "description": "Creamy, nutrient-dense avocados grown without synthetic pesticides or fertilizers. Ideal for salads, toast, or guacamole. Certified organic.",
+      "categoryId": "e3ee"
     }
   ]
 }

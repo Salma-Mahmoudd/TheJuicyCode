@@ -17,6 +17,7 @@ const ProductFormModal = ({ addNewProduct, categoryId }) => {
           ...values,
           categoryId,
           image: "/src/assets/" + values.image,
+          price: parseFloat(values.price).toFixed(2)
         });
         setVisible(false);
         form.resetFields();

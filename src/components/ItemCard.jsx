@@ -14,11 +14,11 @@ export default function ItemCard({ item, handleProdQuantity }) {
       </div>
 
       <div className="col-span-2 text-right text-gray-700">
-        ${item.price.toFixed(2)}
+        ${parseFloat(item.price).toFixed(2)}
       </div>
 
       <div className="col-span-2 text-right font-medium">
-        ${(item.price * item.quantity).toFixed(2)}
+        ${parseFloat(item.price * item.quantity).toFixed(2)}
       </div>
 
       <div className="col-span-2 pr-4">

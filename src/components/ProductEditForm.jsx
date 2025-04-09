@@ -18,7 +18,8 @@ export default function ProductEditForm({
         className="col-span-3 border rounded px-2"
       />
       <input
-        type="text"
+        type="number"
+        step={0.01}
         name="price"
         value={editedProduct.price}
         onChange={(e) => handleEditedProduct(e)}
