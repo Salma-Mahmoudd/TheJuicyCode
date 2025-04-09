@@ -8,7 +8,7 @@ An e-commerce web application built with React, Vite, and Tailwind CSS, simulati
 
 You can view the demo video of the application here:
 
-[▶️ View App Demo Video](https://drive.google.com/file/d/15D_zKjnvHRU-U4UMx4kvdOoH89a7uWs5/view?usp=sharing)
+[▶️ View App Demo Video](https://drive.google.com/drive/u/1/folders/15DBSI_Ev6G7Z1CXlqYfnbqMFh46Yzz6w)
 
 ## Technologies Used
 
