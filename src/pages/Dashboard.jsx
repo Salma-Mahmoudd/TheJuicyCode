@@ -1,15 +1,15 @@
 import { useState } from "react";
 import { RiApps2AddFill } from "react-icons/ri";
-import { RiEdit2Fill } from "react-icons/ri";
-import { TbHttpDelete } from "react-icons/tb";
 import ProductFormModal from "../components/ProductFormModal.jsx";
+import ProductsTable from "../components/ProductsTable.jsx";
 
 const Dashboard = ({
   products,
   categories,
   addNewCategory,
-  deleteProduct,
   addNewProduct,
+  updateProduct,
+  deleteProduct,
 }) => {
   const [openCategories, setOpenCategories] = useState([]);
   const [newCategory, setNewCategory] = useState("");
@@ -25,7 +25,9 @@ const Dashboard = ({
   return (
     <div className="min-h-screen bg-gray-200 text-gray-800 px-10 py-10">
       <div className="max-w-[1350px] mx-auto">
-        <h1 className="text-4xl font-bold mb-10 text-center text-slate-800">Product Dashboard</h1>
+        <h1 className="text-4xl font-bold mb-10 text-center text-slate-800">
+          Product Dashboard
+        </h1>
         <div className="space-y-5">
           <div className="flex items-center sticky top-0 rounded-2xl shadow-lg border border-gray-300 bg-white overflow-hidden p-2">
             <input
@@ -43,12 +45,15 @@ const Dashboard = ({
                   addNewCategory({ name: newCategory });
                   setNewCategory("");
                 }
-              }
-              } />
+              }}
+            />
           </div>
 
           {categories.map((category) => (
-            <div key={category.id} className="rounded-2xl shadow-lg border border-gray-300 bg-white overflow-hidden">
+            <div
+              key={category.id}
+              className="rounded-2xl shadow-lg border border-gray-300 bg-white overflow-hidden"
+            >
               <div
                 className="flex justify-between items-center text-gray-800 text-xl font-semibold px-6 py-4 bg-gray-100 hover:bg-gray-200 transition cursor-pointer"
                 onClick={() => toggleCategory(category.id)}
@@ -60,40 +65,23 @@ const Dashboard = ({
               {openCategories.includes(category.id) && (
                 <>
                   <div className="flex items-center justify-end px-6 py-3">
-                    <ProductFormModal addNewProduct={addNewProduct} categoryId={category.id} />
+                    <ProductFormModal
+                      addNewProduct={addNewProduct}
+                      categoryId={category.id}
+                    />
                   </div>
-                  <div className="my-2 overflow-x-auto text-gray-700">
-                    <div className="grid grid-cols-15 gap-x-2 px-6 py-4 text-md font-semibold wrap-anywhere">
-                      <div className="col-span-3">Product Name</div>
-                      <div className="col-span-2">Price</div>
-                      <div className="col-span-2">Unit</div>
-                      <div className="col-span-5">Description</div>
-                      <div className="col-span-2">Image</div>
-                      <div className="col-span-1 flex justify-center">Actions</div>
-                    </div>
-                    {products
-                      .filter((product) => product.categoryId === category.id)
-                      .map((product) => (
-                        <div key={product.id} className="grid grid-cols-15 gap-x-2 px-6 py-4 text-[15px] border-t border-gray-200 hover:bg-gray-100 transition wrap-anywhere">
-                          <div className="col-span-3 font-bold">{product.name}</div>
-                          <div className="col-span-2">{product.price}</div>
-                          <div className="col-span-2">{product.unit}</div>
-                          <div className="col-span-5">{product.description}</div>
-                          <div className="col-span-2">{product.image.split("/").pop()}</div>
-                          <div className="col-span-1 flex flex-col items-center justify-between space-y-5 text-3xl text-gray-400">
-                            <RiEdit2Fill className="cursor-pointer hover:text-lime-500 transition" />
-                            <TbHttpDelete className="cursor-pointer hover:text-red-500 transition" onClick={() => deleteProduct(product.id)} />
-                          </div>
-                        </div>
-                      ))}
-                  </div>
+                  <ProductsTable
+                    products={products.filter(
+                      (product) => product.categoryId === category.id
+                    )}
+                    updateProduct={updateProduct}
+                    deleteProduct={deleteProduct}
+                  />
                 </>
               )}
             </div>
           ))}
-
         </div>
-
       </div>
     </div>
   );

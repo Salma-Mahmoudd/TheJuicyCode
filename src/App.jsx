@@ -97,6 +97,17 @@ export default function App() {
     }
   }
 
+  const updateProduct = async (id, updatedProduct) => {
+    try {
+      const response = await axios.put(`http://localhost:3002/products/${id}`, updatedProduct);
+      if (response.status === 200) {
+        setProducts((prevProducts) => prevProducts.map((product) => product.id === id ? response.data : product));
+      }
+    } catch (error) {
+      console.error("Error updating product:", error);
+    }
+  }
+
   const deleteProduct = async (id) => {
     try {
       const response = await axios.delete(`http://localhost:3002/products/${id}`);
@@ -117,8 +128,9 @@ export default function App() {
             categories={categories}
             products={products}
             addNewCategory={addNewCategory}
-            deleteProduct={deleteProduct}
             addNewProduct={addNewProduct}
+            updateProduct={updateProduct}
+            deleteProduct={deleteProduct}
           />
         } />
         <Route path="/cart" element={<Cart cart={cart} handleProdQuantity={handleProdQuantity} />} />

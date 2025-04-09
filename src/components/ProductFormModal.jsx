@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import { Modal, Form, Input } from "antd";
-import { BiCategory } from "react-icons/bi";
 
 const ProductFormModal = ({ addNewProduct, categoryId }) => {
   const [visible, setVisible] = useState(false);
@@ -14,7 +13,11 @@ const ProductFormModal = ({ addNewProduct, categoryId }) => {
     form
       .validateFields()
       .then((values) => {
-        addNewProduct({...values, categoryId, image: "/src/assets/" + values.image});
+        addNewProduct({
+          ...values,
+          categoryId,
+          image: "/src/assets/" + values.image,
+        });
         setVisible(false);
         form.resetFields();
       })
